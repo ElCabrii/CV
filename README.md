@@ -17,7 +17,6 @@ Welcome to my CV repository. This project aims at providing a simple and clean w
 ## Features
 
 - Responsive design
-- Easy to update
 - Clean layout
 
 ## Installation
