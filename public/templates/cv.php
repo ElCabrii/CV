@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 <header>
-    <button onclick="window.location.href='/cv'">Home</button>
+    <button onclick="window.location.href='/templates/'">Home</button>
     <div class="menuBox">
         <button id="career-btn">My career</button>
         <div id="career-options" class="dropdown-content">
-            <a href="/cv/cv.php">CV</a>
-            <a href="/cv/projects.php">Projects</a>
+            <a href="/templates/cv.php">CV</a>
+            <a href="/templates/projects.php">Projects</a>
         </div>
     </div>
-
-    <button onclick="window.location.href='/cv/contact.php'">Contact</button>
+    <button onclick="window.location.href='/templates/contact.php'">Contact</button>
     <div class="menuBox">
-        <button id="profile-btn" onclick="window.location.href='/cv/profile.php'">Profile</button>
+        <button id="profile-btn" >Profile</button>
         <div id="profile-options" class="dropdown-content">
-            <a href="/cv/login.php">Login</a>
+            <a href="/templates/login.php">Login</a>
+            <a href="/templates/register.php">Register</a>
         </div>
     </div>
 </header>

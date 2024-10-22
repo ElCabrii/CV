@@ -4,6 +4,7 @@ body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
 }
 
 header{
@@ -66,4 +67,56 @@ header button:hover{
     align-items: center;
 }
 
-.dropdown-content
+.container{
+    margin-top: -45px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container h1{
+    color: #D9D9D9;
+    font-size: 60px;
+    margin-top: 0;
+}
+
+.container p{
+    color: #D9D9D9;
+    font-size: 20px;
+    margin-top: 0;
+    line-height: 180%;
+    text-align: center;
+}
+
+.container button{
+    background-color: #D9D9D9;
+    color: #373737;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.container a{
+    color: blueviolet;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container button a{
+    color: #373737;
+    text-decoration: none;
+}
