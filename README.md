@@ -1,6 +1,6 @@
 # CV Repository
 
-This repository contains the source code and assets for my personal CV website.
+This repository contains the source code and assets for my CV Generator website.
 
 ## Table of Contents
 
