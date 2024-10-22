@@ -1,6 +1,6 @@
 # CV Repository
 
-This repository contains the source code and assets for my personal CV website.
+This repository contains the source code and assets for my CV Generator website.
 
 ## Table of Contents
 
@@ -17,8 +17,16 @@ Welcome to my CV repository. This project aims at providing a simple and clean w
 ## Features
 
 - Responsive design
-- Easy to update
 - Clean layout
+
+## Upcoming Features
+
+- Create an account (Logging in with Google possible)
+- Fill in a form with your personal informations
+- Register projects to your account
+- Generate a CV based on those informations
+- The CV can be edited and customized at any time, downloaded and sent via email to the user
+- An admin can customize the style of the page Projects
 
 ## Installation
 
