@@ -19,6 +19,15 @@ Welcome to my CV repository. This project aims at providing a simple and clean w
 - Responsive design
 - Clean layout
 
+## Upcoming Features
+
+- Create an account (Logging in with Google possible)
+- Fill in a form with your personal informations
+- Register projects to your account
+- Generate a CV based on those informations
+- The CV can be edited and customized at any time, downloaded and sent via email to the user
+- An admin can customize the style of the page Projects
+
 ## Installation
 
 To set up the project locally, follow these steps:
