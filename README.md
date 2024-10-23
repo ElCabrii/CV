@@ -36,15 +36,21 @@ To set up the project locally, follow these steps:
     ```bash
     git clone https://github.com/ElCabrii/CV.git
     ```
-2. Navigate to the project directory:
+2. Install Docker
+    - For Windows: [Docker Desktop](https://docs.docker.com/docker-for-windows/install/)
+    - For Mac: [Docker Desktop](https://docs.docker.com/docker-for-mac/install/)
+    - For Linux: [Docker Engine](https://docs.docker.com/engine/install/)
+    
+3. Run the following command 
     ```bash
-    cd CV
+    docker-compose build
+    docker-compose up
     ```
-3. Start a local server using XAMPP or any other preferred method.
+
 
 ## Usage
 
-Open your web browser and navigate to `http://localhost/CV` to view the CV website.
+Open your web browser and navigate to `http://localhost/` to view the CV website.
 
 ## License
 
