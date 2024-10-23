@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - C:\\Users\\gabde\\Documents\\cv:/var/www/html #A modifier avant rendu
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
