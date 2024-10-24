@@ -8,11 +8,7 @@
         </div>
     </div>
     <button onclick="window.location.href='index.php?page=contact'">Contact</button>
-    <div class="menuBox">
-        <button id="profile-btn" >Profile</button>
-        <div id="profile-options" class="dropdown-content">
-            <a href="index.php?page=login">Login</a>
-            <a href="index.php?page=register">Register</a>
-        </div>
+    <div id="login">
+        <button onclick="window.location.href='index.php?page=login'">Login</button>
     </div>
 </header>
