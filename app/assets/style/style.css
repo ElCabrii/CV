@@ -68,12 +68,10 @@ header button:hover{
 }
 
 .container{
-    margin-top: -45px;
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     align-items: center;
-    justify-content: center;
     height: 100vh;
 }
 
@@ -86,7 +84,6 @@ header button:hover{
 .container p{
     color: #D9D9D9;
     font-size: 20px;
-    margin-top: 0;
     line-height: 180%;
     text-align: center;
 }
@@ -103,7 +100,7 @@ header button:hover{
 }
 
 .container a{
-    color: blueviolet;
+    color: #8a2be2;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -113,7 +110,6 @@ header button:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
 }
 
 .container button a{
