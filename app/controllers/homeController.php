@@ -1,3 +1,3 @@
 <?php
-$template = './app/views/pages/home.php';
+$template = './views/pages/home.php';
 

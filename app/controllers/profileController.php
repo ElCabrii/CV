@@ -1,2 +1,2 @@
 <?php
-$template = './app/views/pages/profile.php';
+$template = './views/pages/profile.php';

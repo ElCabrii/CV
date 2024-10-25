@@ -9,4 +9,4 @@ if (isset($_GET['page']) && in_array($_GET['page'], $availableRouteNames, true))
     $controller = DEFAULT_ROUTE;
 }
 
-require './app/controllers/' . $controller;
+require './controllers/' . $controller;

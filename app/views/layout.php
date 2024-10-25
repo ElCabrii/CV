@@ -7,9 +7,9 @@
 </head>
 <body>
 <main>
-    <?php require './app/views/partials/_header.php'; ?>
+    <?php require './views/partials/_header.php'; ?>
     <?php require($template); ?>
-    <?php require './app/views/partials/_footer.php'; ?>
+    <?php require './views/partials/_footer.php'; ?>
 </main>
 </body>
 </html>
