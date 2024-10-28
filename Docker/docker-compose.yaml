@@ -13,19 +13,19 @@ services:
       - ../app:/app
 
   db:
-      image: mariadb:latest
-      environment:
-        MYSQL_ROOT_PASSWORD: "root"
-        MYSQL_DATABASE: "cv_db"
-      volumes:
-        - mysqldata:/var/lib/mysql
-      ports:
-        - 3306:3306
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "cv_db"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    ports:
+      - "3306:3306"
 
   adminer:
-      image: adminer:latest
-      ports:
-        - "8080:8080"
+    image: adminer:latest
+    ports:
+      - "8080:8080"
 
 volumes:
   mysqldata: {}

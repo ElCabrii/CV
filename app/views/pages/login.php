@@ -1,20 +1,23 @@
-
-<head>
-    <link rel="stylesheet" href="assets/style/login.css">
-</head>
 <div class="container">
     <h1>Login</h1>
-    <form action="authenticate.php" method="post">
+    <?php if (!empty($error)): ?>
+        <div class="error"><?php echo $error; ?></div>
+    <?php endif; ?>
+    <form action="/index.php?page=login" method="POST">
         <div class="form__group field">
-            <input type="input" class="form__field" placeholder="Username" required>
-            <label for="Username" class="form__label">Name</label>
+            <input type="email" class="form__field" name="email" placeholder="Email" required>
+            <label for="email" class="form__label">Email</label>
         </div>
         <div class="form__group field">
-            <input type="password" class="form__field" placeholder="Password" required>
-            <label for="Password" class="form__label">Password</label>
+            <input type="password" class="form__field" name="password" placeholder="Password" required>
+            <label for="password" class="form__label">Password</label>
         </div>
         <button type="submit">Login</button>
     </form>
+    <div class="social">
+        <img src="./assets/img/google.svg" alt="Google" onclick="window.location.href='/'">
+        <img src="./assets/img/facebook.svg" alt="Facebook" onclick="window.location.href='/'">
+    </div>
     <p>Forgot your password ? Reset it <a href="index.php?page=reset">here</a><br>
     If you don't have an account, you can create one <a href="index.php?page=register">here</a>
     </p>

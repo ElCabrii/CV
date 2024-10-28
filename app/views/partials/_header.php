@@ -9,6 +9,12 @@
     </div>
     <button onclick="window.location.href='index.php?page=contact'">Contact</button>
     <div id="login">
-        <button onclick="window.location.href='index.php?page=login'">Login</button>
+        <button onclick="window.location.href='index.php?page=login'"><?php 
+            if (isset($_SESSION['user'])) {
+                echo 'Profile';
+            } else {
+                echo 'Login';
+            }
+        ?></button>
     </div>
 </header>
