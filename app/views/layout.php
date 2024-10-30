@@ -9,6 +9,12 @@
             <link rel="stylesheet" href="./assets/style/<?php echo $style; ?>.css">
         <?php endforeach; ?>
     <?php endif; ?> 
+    <script src="./assets/js/script.js" defer></script>
+    <?php if (isset($scripts)): ?>
+        <?php foreach ($scripts as $script): ?>
+            <script src="./assets/js/<?php echo $script; ?>.js"></script>
+        <?php endforeach; ?>
+    <?php endif; ?>
 </head>
 <body>
     <?php require './views/partials/_header.php'; ?>
