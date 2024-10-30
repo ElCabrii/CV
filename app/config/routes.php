@@ -7,12 +7,12 @@ const AVAILABLE_ROUTES = [
     'profile' => 'profileController.php',
     'login' => 'loginController.php',
     'register' => 'registerController.php',
-    'logout' => 'logoutController.php',
     'privacy' => 'privacypolicyController.php',
     'termsandconditions' => 'termsandconditionsController.php',
     '404' => '404Controller.php',
+    'redirect' => 'redirectController.php'
 ];
 
-const DEFAULT_ROUTE = AVAILABLE_ROUTES['home'];
+const DEFAULT_ROUTE = AVAILABLE_ROUTES['404'];
 
 ?>
