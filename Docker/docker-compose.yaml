@@ -14,6 +14,7 @@ services:
 
   db:
     image: mariadb:latest
+    build: services/db
     environment:
       MYSQL_ROOT_PASSWORD: "root"
       MYSQL_DATABASE: "cv_db"
