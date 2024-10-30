@@ -12,7 +12,9 @@ if (isset($_SESSION['user']) && isset($_GET['page']) && $_GET['page'] === 'login
 
 if (isset($_GET['page']) && in_array($_GET['page'], $availableRouteNames, true)) {
     $controller = AVAILABLE_ROUTES[$_GET['page']];
-} else {
+} else if (!isset($_GET['page'])) {
+    $controller = AVAILABLE_ROUTES['home'];
+} else{
     $controller = DEFAULT_ROUTE;
 }
 
