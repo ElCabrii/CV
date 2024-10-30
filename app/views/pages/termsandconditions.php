@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Terms and Conditions</h1>
-    <p>Effective Date: [Date]</p>
+    <p>Effective Date: 28/10/2024</p>
     <p>Welcome to [Website Name]! This website is part of a school project and is intended for educational use only. By using this site, you agree to these Terms and Conditions.</p>
     <h2>1. Use of the Site</h2>
     <p>This site is provided "as-is" for educational purposes. You are welcome to explore the content and features as part of the project requirements, but please note:</p>
