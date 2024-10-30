@@ -2,7 +2,7 @@
 $template = './views/pages/login.php';
 $title = 'Login';
 $error = '';
-$styles = ['login'];
+$styles = ['form'];
 
 require './models/userModel.php';
 
