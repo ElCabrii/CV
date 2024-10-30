@@ -3,6 +3,9 @@
     <div>
         <p>Welcome to your profile page</p>
     </div>
+    <?php if (!empty($error)): ?>
+        <div class="error"><?php echo $error; ?></div>
+    <?php endif; ?>
     <div id="info">
         <form method="POST">
             Update your personal informations:
@@ -17,10 +20,16 @@
             <button type="submit">Update</button>
         </form>
     </div>
+    <button onclick="window.location.href='index.php?page=cv'">Show CV</button>
     <div>
         <p>If you want to reset your password, click <a href="index.php?page=reset">here</a></p>
     </div>
     <div>
-        <p>If you want to logout, click <a href="index.php?page=logout">here</a></p>
+        <p>If you want to logout, click <a href="index.php?page=redirect&action=logout">here</a></p>
     </div>
+    <?php 
+        if ($_SESSION['user']['role'] === 'admin'){
+            echo '<button onclick="window.location.href=\'index.php?page=admin\'">Admin Panel</button>';
+        }
+    ?>
 </div>
