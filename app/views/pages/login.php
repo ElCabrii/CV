@@ -14,10 +14,6 @@
         </div>
         <button type="submit">Login</button>
     </form>
-    <div class="social">
-        <img src="./assets/img/google.svg" alt="Google" onclick="window.location.href='/'">
-        <img src="./assets/img/facebook.svg" alt="Facebook" onclick="window.location.href='/'">
-    </div>
     <p>Forgot your password ? Reset it <a href="index.php?page=reset">here</a><br>
     If you don't have an account, you can create one <a href="index.php?page=register">here</a>
     </p>
