@@ -1,7 +1,7 @@
 <?php
 $template = './views/pages/register.php';
 $title = 'Register';
-$styles = ['login'];
+$styles = ['form'];
 
 require './models/userModel.php';
 
@@ -15,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($password) && !empty($passwordConfirmation) && $password === $passwordConfirmation) {
         if (register($email, $password)) {
             $error = "Registration successful!";
-            header("Location: /index.php?page=login");
+            login($email, $password);
+            header("Location: /index.php?page=profile");
             exit;
         } else {
             $error = "Email already exists or registration failed.";
