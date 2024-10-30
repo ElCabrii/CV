@@ -1,7 +1,7 @@
 <?php
 $template = './views/pages/profile.php';
 $title = 'Profile';
-$styles = ['login'];
+$styles = ['form'];
 
 
 if (!isset($_SESSION['user'])) {
@@ -10,13 +10,13 @@ if (!isset($_SESSION['user'])) {
 } 
 
 
-if ($_SESSION['user']['first_name'] === ''){
+if ($_SESSION['user']['first_name'] === null){
     $first_name = 'First Name';
 } else {
     $first_name = $_SESSION['user']['first_name'];
 }
 
-if ($_SESSION['user']['last_name'] === ''){
+if ($_SESSION['user']['last_name'] === null){
     $last_name = 'Last Name';
 } else {
     $last_name = $_SESSION['user']['last_name'];
