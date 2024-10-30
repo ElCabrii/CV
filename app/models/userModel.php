@@ -4,7 +4,7 @@ require './models/connections.php';
 
 function login($email, $password) {
     $db = dbConnect();
-    $query = $db->prepare('SELECT * FROM users WHERE email = :email');
+    $query = $db->prepare('SELECT * FROM user WHERE email = :email');
     $query->execute(['email' => $email]);
     $user = $query->fetch();
     if ($user && password_verify($password, $user['password'])) {
@@ -22,18 +22,18 @@ function register($email, $password) {
         return false;
     }
 
-    $query = $db->prepare('SELECT * FROM users WHERE email = :email');
+    $query = $db->prepare('SELECT * FROM user WHERE email = :email');
     $query->execute(['email' => $email]);
     if ($query->fetch()) {
         return false;
     }
     
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    
-    $query = $db->prepare('INSERT INTO users (email, password) VALUES (:email, :password)');
+    $query = $db->prepare('INSERT INTO user (email, password, role) VALUES (:email, :password, :role)');
     $result = $query->execute([
         'email' => $email,
-        'password' => $hashedPassword
+        'password' => $hashedPassword,
+        'role' => 'user'
     ]);
     
     return $result;
@@ -41,11 +41,15 @@ function register($email, $password) {
 
 function updateProfile($first_name, $last_name) {
     $db = dbConnect();
-    $query = $db->prepare('UPDATE users SET first_name = :first_name, last_name = :last_name WHERE email = :email');
-    return $query->execute([
+    $query = $db->prepare('UPDATE user SET first_name = :first_name, last_name = :last_name WHERE email = :email');
+    $query->execute([
         'email' => $_SESSION['user']['email'],
         'first_name' => $first_name,
         'last_name' => $last_name
     ]);
-    login($email, $password);
+    $query = $db->prepare('SELECT * FROM user WHERE email = :email');
+    $query->execute(['email' => $_SESSION['user']['email']]);
+    $user = $query->fetch();
+    $_SESSION['user'] = $user;
+    return true;
 }
