@@ -53,3 +53,67 @@ function updateProfile($first_name, $last_name) {
     $_SESSION['user'] = $user;
     return true;
 }
+
+function getUser($id) {
+    $db = dbConnect();
+    $query = $db->prepare('SELECT * FROM user WHERE id = :id');
+    $query->execute(['id' => $id]);
+    $user = $query->fetch();
+    return $user;
+}
+
+function getAllUsers() {
+    $db = dbConnect();
+    $query = $db->query('SELECT * FROM user');
+    $users = $query->fetchAll();
+    return $users;
+}
+
+function deleteUser($id) {
+    $db = dbConnect();
+    $query = $db->prepare('DELETE FROM user WHERE id = :id');
+    $query->execute(['id' => $id]);
+    return true;
+}
+
+function getRoleBtn($id) {
+    $user = getUser($id);
+    if ($user['role'] === 'user') {
+        return '<button onclick="window.location.href=\'index.php?page=admin&action=switch&id=' . $id . '\'">Switch to admin</button>';
+    } else {
+        return '<button onclick="window.location.href=\'index.php?page=admin&action=switch&id=' . $id . '\'">Switch to user</button>';
+    }
+}
+
+function switchRole($id) {
+    $db = dbConnect();
+    $user = getUser($id);
+    if ($user['role'] === 'user') {
+        $role = 'admin';
+    } else {
+        $role = 'user';
+    }
+    try {
+        $query = $db->prepare('UPDATE user SET role = :role WHERE id = :id');
+        $query->execute([
+            'role' => $role,
+            'id' => $id
+        ]);
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    $user = getUser($id);
+    $_SESSION['user'] = $user;
+    return true;
+}
+
+function resetPassword($password) {
+    $db = dbConnect();
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    $query = $db->prepare('UPDATE user SET password = :password WHERE id = :id');
+    $query->execute([
+        'password' => $hashedPassword,
+        'id' => $_SESSION['user']['id']
+    ]);
+    return true;
+}
