@@ -16,7 +16,8 @@
     }
     ?>  
     </div>
-    <div id="project-creation">
+    <div class="element-creation" id="project-form">
+        <button onclick=closeProjectForm() id="close-btn">X</button>
         <form method="POST">
             <div class="form__group field">
                 <input type="text" class="form__field" name="title" placeholder="Title" required>
@@ -38,5 +39,5 @@
             </div>
             <button type="submit">Create</button>  
     </div>
-    <button onclick=openProjectCreation() id="project-btn">Add a project</button>
+    <button onclick=openProjectForm() class="project-btn">Add a project</button>
 </div>
