@@ -7,3 +7,5 @@ const DB_CONFIG = [
   'username' => 'root',
   'password' => //your db password
 ];
+
+//no time to change that into importing from .env file
