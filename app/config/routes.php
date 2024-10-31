@@ -10,7 +10,9 @@ const AVAILABLE_ROUTES = [
     'privacy' => 'privacypolicyController.php',
     'termsandconditions' => 'termsandconditionsController.php',
     '404' => '404Controller.php',
-    'redirect' => 'redirectController.php'
+    'redirect' => 'redirectController.php',
+    'admin' => 'adminController.php',
+    'reset' => 'resetController.php'
 ];
 
 const DEFAULT_ROUTE = AVAILABLE_ROUTES['404'];
