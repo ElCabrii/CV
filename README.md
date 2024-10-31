@@ -37,7 +37,11 @@ To set up the project locally, follow these steps:
     - For Mac: [Docker Desktop](https://docs.docker.com/docker-for-mac/install/)
     - For Linux: [Docker Engine](https://docs.docker.com/engine/install/)
     
-3. Run the following command to start the project:
+3. To start the project:
+    - Create a `.env` file in the `Docker` directory and add the following environment variables:
+    MYSQL_ROOT_PASSWORD=your_password
+    MYSQL_DATABASE=your_database
+    - Save it and run the following command in the terminal:
 
     ```bash
     cd Docker
