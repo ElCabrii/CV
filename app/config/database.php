@@ -1,8 +1,9 @@
 <?php
+
 const DB_CONFIG = [
-  'host'     => 'db',
+  'host'     => //your db name
   'port'     => '3306',
   'dbname'   => 'cv_db',
   'username' => 'root',
-  'password' => 'root'
+  'password' => //your db password
 ];
