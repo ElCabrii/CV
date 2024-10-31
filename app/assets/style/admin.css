@@ -1,0 +1,32 @@
+#users-list{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#user-table{
+    width: 50vw;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #D9D9D9;
+    color: #D9D9D9;
+}
+
+#user-table th{
+    background-color: #373737;
+    color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-table td{
+    border: 1px solid #D9D9D9;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-table td button{
+    margin-top: 0;
+}
