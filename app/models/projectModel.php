@@ -46,7 +46,7 @@ function createProject($title, $description, $start_date, $end_date, $role_in_pr
 function getProjectManager($project_id) {
     $db = dbConnect();
     $query = $db->prepare('
-        SELECT user.first_name, user.last_name
+        SELECT user.id, user.email, user.first_name, user.last_name
         FROM user
         JOIN project_user ON user.id = project_user.user_id
         WHERE project_user.project_id = :project_id AND project_user.role_in_project = "manager"
@@ -76,7 +76,8 @@ function joinProject($project_id) {
 
 function leaveProject($project_id) {
     $db = dbConnect();
-    $is_manager = getProjectManager($project_id)['id'] == $_SESSION['user']['id'];
+    $manager = getProjectManager($project_id);
+    $is_manager = $manager['id'] === $_SESSION['user']['id'];
     try{
         $query = $db->prepare('
         DELETE FROM project_user WHERE project_id = :project_id AND user_id = :user_id
@@ -106,6 +107,9 @@ function leaveProject($project_id) {
 }
 
 function userInProject($project_id) {
+    if (!isset($_SESSION['user'])) {
+        return '<button onclick="window.location.href = \'/index.php?page=login\'">Login to join</button>';
+    }
     $db = dbConnect();
     $query = $db->prepare('
         SELECT role_in_project
