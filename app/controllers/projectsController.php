@@ -1,8 +1,8 @@
 <?php
 $template = './views/pages/projects.php';
 $title = 'Projects';
-$styles = ['form', 'projects'];
-$scripts = ['projects'];
+$styles = ['form', 'projects-cv'];  
+$scripts = ['projects', 'form'];
 
 require './models/projectModel.php';
 
@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         createProject($title, $description, $start_date, $end_date);
         $error = "Project created successfully!";
+        $projects = getAllProjects();
     } catch (PDOException $e) {
         if ($e->getCode() == 23000) {
             $error = "Error: A project with this title already exists.";
