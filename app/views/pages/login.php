@@ -14,7 +14,7 @@
         </div>
         <button type="submit">Login</button>
     </form>
-    <p>Forgot your password ? Reset it <a href="index.php?page=reset">here</a><br>
+    <p>Forgot your password ? Send us an email at <a href="mailto:mailto:cvmakerphp@gmail.com'" target="_blank">cvmakerphp@gmail.com</a><br>
     If you don't have an account, you can create one <a href="index.php?page=register">here</a>
     </p>
 </div>
