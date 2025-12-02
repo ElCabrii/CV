@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const exportPdfBtn = document.getElementById('export-pdf');
     const body = document.body;
     const icon = themeToggleBtn.querySelector('i');
 
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     themeToggleBtn.addEventListener('click', () => {
         body.classList.toggle('light-theme');
-        
+
         // Save preference
         if (body.classList.contains('light-theme')) {
             localStorage.setItem('theme', 'light');
@@ -25,9 +24,5 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.remove('icon-energy');
             icon.classList.add('icon-bulb');
         }
-    });
-
-    exportPdfBtn.addEventListener('click', () => {
-        window.print();
     });
 });
