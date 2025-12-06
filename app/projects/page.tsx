@@ -3,6 +3,8 @@ import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import ProjectEntry from '../components/ProjectEntry';
 
+import { HEADER_DATA } from '../data/content';
+
 export default function Projects() {
     return (
         <>
@@ -13,13 +15,14 @@ export default function Projects() {
                 </div>
                 <div className="container">
                     <Header
-                        pName="Gabriel de Bure"
-                        pJobTitle="Student and apprentice Software developer"
-                        pEmail="debure.gabriel@gmail.com"
-                        pPhone="+33 6 24 10 34 06"
-                        pLocation="Toulouse, France"
-                        pLinkedIn="https://www.linkedin.com/in/gabrieldebure"
-                        pGitHub="https://github.com/ElCabrii"
+                        pName={HEADER_DATA.name}
+                        pProfileImage={HEADER_DATA.profileImage}
+                        pJobTitle={HEADER_DATA.jobTitle}
+                        pEmail={HEADER_DATA.email}
+                        pPhone={HEADER_DATA.phone}
+                        pLocation={HEADER_DATA.location}
+                        pLinkedIn={HEADER_DATA.linkedIn}
+                        pGitHub={HEADER_DATA.gitHub}
                     />
 
                     <div className="content">

@@ -1,5 +1,8 @@
+import Image from 'next/image';
+
 interface HeaderProps {
     pName: string;
+    pProfileImage?: string;
     pJobTitle: string;
     pEmail: string;
     pPhone: string;
@@ -10,6 +13,7 @@ interface HeaderProps {
 
 export default function Header({
     pName,
+    pProfileImage,
     pJobTitle,
     pEmail,
     pPhone,
@@ -19,6 +23,18 @@ export default function Header({
 }: HeaderProps) {
     return (
         <div className="header">
+            {pProfileImage && (
+                <div className="profile-image-container" style={{ marginBottom: '1rem' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        src={pProfileImage}
+                        alt={pName}
+                        width={150}
+                        height={150}
+                        style={{ borderRadius: '50%', objectFit: 'cover' }}
+                    />
+                </div>
+            )}
             <h1>{pName}</h1>
             <p className="job-title">{pJobTitle}</p>
             <div className="contact-info">
