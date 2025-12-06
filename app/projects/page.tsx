@@ -1,6 +1,7 @@
 import ThemeToggle from '../components/ThemeToggle';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import ProjectEntry from '../components/ProjectEntry';
 
 export default function Projects() {
     return (
@@ -24,10 +25,30 @@ export default function Projects() {
                     <div className="content">
                         <div className="main">
                             <section>
-                                <h2>Personal Projects</h2>
-                                <p>
-                                    This section will showcase my personal projects and side work. Currently under construction.
-                                </p>
+                                <h2>Active Development</h2>
+                                <ProjectEntry
+                                    pTitle="Tuums"
+                                    pDescription="A social media platform for gamers currently under active development. It integrates gaming accounts from multiple platforms to aggregate and display gamer statistics on a unified profile."
+                                    pTags={['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase (Self-hosted)']}
+                                    pUrl="https://mytuums.com"
+                                />
+                                <ProjectEntry
+                                    pTitle="ScholAI"
+                                    pDescription="An advanced AI-powered mentorship platform designed to guide students through coding and software design. It functions as an interactive programming tutor, fostering skill development through personalized assistance and project-based learning."
+                                    pTags={['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase (Self-hosted)']}
+                                    pUrl="https://scholai.app"
+                                />
+                            </section>
+
+                            <section>
+                                <h2>Completed Projects</h2>
+                                <ProjectEntry
+                                    pTitle="Speed Maze"
+                                    pDescription="A time-based first-person maze challenge developed in Unity. Players must navigate through a series of maze blocks, each containing a checkpoint, while managing a strict 10-second timer per block. Developed as a second-year Game Programming module project."
+                                    pTags={['Unity', 'C#']}
+                                    pUrl="https://github.com/ElCabrii/SpeedMaze"
+                                    pUrlText="View Source"
+                                />
                             </section>
                         </div>
                     </div>
