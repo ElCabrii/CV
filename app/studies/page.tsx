@@ -1,8 +1,9 @@
 import ThemeToggle from '../components/ThemeToggle';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import EducationItem from '../components/EducationItem';
 
-import { HEADER_DATA } from '../data/content';
+import { HEADER_DATA, EDUCATION, CERTIFICATIONS } from '../data/content';
 
 export default function Studies() {
     return (
@@ -28,9 +29,27 @@ export default function Studies() {
                         <div className="main">
                             <section>
                                 <h2>Studies</h2>
-                                <p>
-                                    This section will detail my academic journey and achievements. Currently under construction.
-                                </p>
+                                {EDUCATION.map((edu, index) => (
+                                    <EducationItem
+                                        key={index}
+                                        pTitle={edu.title}
+                                        pInstitution={edu.institution}
+                                        pYear={edu.year}
+                                        pSecondaryInfo={edu.secondaryInfo}
+                                    />
+                                ))}
+                            </section>
+
+                            <section>
+                                <h2>Certifications</h2>
+                                {CERTIFICATIONS.map((cert, index) => (
+                                    <div className="education-item" key={index}>
+                                        <p>
+                                            <strong>{cert.name}</strong>
+                                        </p>
+                                        <p className="year">{cert.year}</p>
+                                    </div>
+                                ))}
                             </section>
                         </div>
                     </div>

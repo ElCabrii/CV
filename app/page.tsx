@@ -4,17 +4,16 @@ import Header from './components/Header';
 import JobEntry from './components/JobEntry';
 import ProjectEntry from './components/ProjectEntry';
 import SkillCategory from './components/SkillCategory';
-import EducationItem from './components/EducationItem';
 import {
+
   HEADER_DATA,
   PROFESSIONAL_SUMMARY,
   WORK_EXPERIENCE,
   PROJECTS,
   SKILLS,
-  EDUCATION,
-  CERTIFICATIONS,
   LANGUAGES
 } from './data/content';
+
 
 export default function Home() {
   return (
@@ -63,7 +62,7 @@ export default function Home() {
 
               {/* Projects */}
               <section>
-                <h2>Key Projects</h2>
+                <h2>Key Project</h2>
 
                 {PROJECTS.map((project, index) => (
                   <ProjectEntry
@@ -90,34 +89,8 @@ export default function Home() {
                 ))}
               </section>
 
-              {/* Education */}
-              <section>
-                <h2>Education</h2>
+              {/* Education and Certifications sections removed */}
 
-                {EDUCATION.map((edu, index) => (
-                  <EducationItem
-                    key={index}
-                    pTitle={edu.title}
-                    pInstitution={edu.institution}
-                    pYear={edu.year}
-                    pSecondaryInfo={edu.secondaryInfo}
-                  />
-                ))}
-              </section>
-
-              {/* Certifications */}
-              <section>
-                <h2>Certifications</h2>
-
-                {CERTIFICATIONS.map((cert, index) => (
-                  <div className="education-item" key={index}>
-                    <p>
-                      <strong>{cert.name}</strong>
-                    </p>
-                    <p className="year">{cert.year}</p>
-                  </div>
-                ))}
-              </section>
 
               {/* Languages */}
               <section>

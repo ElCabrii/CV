@@ -33,7 +33,7 @@ export default function Projects() {
                                     pTitle="Tuums"
                                     pDescription="A social media platform for gamers currently under active development. It integrates gaming accounts from multiple platforms to aggregate and display gamer statistics on a unified profile."
                                     pTags={['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase (Self-hosted)']}
-                                    pUrl="https://mytuums.com"
+                                    pUrl="https://tuums.fr"
                                 />
                                 <ProjectEntry
                                     pTitle="ScholAI"

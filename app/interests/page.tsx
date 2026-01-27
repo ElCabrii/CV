@@ -1,8 +1,9 @@
 import ThemeToggle from '../components/ThemeToggle';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import InterestEntry from '../components/InterestEntry';
 
-import { HEADER_DATA } from '../data/content';
+import { HEADER_DATA, INTERESTS } from '../data/content';
 
 export default function Interests() {
     return (
@@ -28,9 +29,13 @@ export default function Interests() {
                         <div className="main">
                             <section>
                                 <h2>Interests</h2>
-                                <p>
-                                    This section will explore my hobbies and interests outside of work. Currently under construction.
-                                </p>
+                                {INTERESTS.map((interest, index) => (
+                                    <InterestEntry
+                                        key={index}
+                                        pTitle={interest.title}
+                                        pDescription={interest.description}
+                                    />
+                                ))}
                             </section>
                         </div>
                     </div>

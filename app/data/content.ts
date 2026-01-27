@@ -1,4 +1,6 @@
+
 export const HEADER_DATA = {
+
     name: "Gabriel de Bure",
     profileImage: "/Gabriel.jpg",
     jobTitle: "Student and apprentice Software developer",
@@ -46,11 +48,7 @@ export const PROJECTS = [
     {
         title: "Social Media Platform : Tuums (Ongoing)",
         description: "Built the backend of a social media platform using Golang with built-in authentication and authorization, then switched to NestJS for better compatibility with the frontend and to take advantage of tRPC and BetterAuth.",
-    },
-    {
-        title: "AI Saas : ScholAI (Ongoing)",
-        description: "Developing a Saas application that uses AI to help students learning programming. Ojective : Replace the conventional AI coding assistant by a more personalized and interactive one, that acts like a teacher.",
-    },
+    }
 ];
 
 export const SKILLS = [
@@ -85,6 +83,14 @@ export const SKILLS = [
 ];
 
 export const EDUCATION = [
+    {
+        title: "Scholarship in Computer Science",
+        institution: "Ynov Campus Toulouse",
+        year: "2023 - 2028",
+        secondaryInfo: "Computer Science Course",
+    },
+
+
     {
         title: "Master of Computer Science (Upcoming)",
         institution: "Toulouse Ynov Campus",
@@ -121,3 +127,28 @@ export const LANGUAGES = [
     "English - Fluent",
     "Spanish - Intermediate",
 ];
+
+export const INTERESTS = [
+    {
+        title: "Computer Science",
+        description:
+            "Deeply interested in the theoretical and practical aspects of computation, from game programming, to software programming on low-level languages, without forgetting full-stack development.",
+    },
+    {
+        title: "Automotive",
+        description: "Passionate about cars, i have always been fascinated by the engineering behind them. I love roaring engines, and have also learned to enjoy electric cars (still not Teslas though).",
+    },
+    {
+        title: "Everyday tech",
+        description: "From phones to smart devices, i am always curious about the latest technology and how they evolve everyday. I'm more of a Samsung guy, depsite really enjoying what Nothing does.",
+    },
+    {
+        title: "Video Games",
+        description: "I love Cyberpunk 2077, which i've played for hundreds of hours, amongst a few other solo games. I also love League of Legends and especially the esport that comes with it. I have played it a lot in the past two or three years",
+    },
+    {
+        title: "Music",
+        description: "I'm an occasional pianist, and learned guitar for a few years when i was younger. I'm hoping to reach 100 000 minutes of listening on Spotify this year.",
+    }
+];
+
