@@ -397,6 +397,17 @@ ul li::marker {
   z-index: 100;
 }
 
+.controls-left {
+  left: 30px;
+  right: auto;
+}
+
+.controls-bottom-right {
+  top: auto;
+  bottom: 30px;
+  right: 30px;
+}
+
 .btn-control {
   background-color: var(--color-card-bg);
   color: var(--color-text-muted);
@@ -418,6 +429,10 @@ ul li::marker {
   border-color: var(--color-accent);
   transform: rotate(15deg) scale(1.1);
   box-shadow: var(--shadow-lg);
+}
+
+.btn-download-cv {
+  text-decoration: none;
 }
 
 /* Buttons */
@@ -487,6 +502,17 @@ ul li::marker {
 
   .controls {
     top: 20px;
+    right: 20px;
+  }
+
+  .controls-left {
+    left: 20px;
+    right: auto;
+  }
+
+  .controls-bottom-right {
+    top: auto;
+    bottom: 20px;
     right: 20px;
   }
 }

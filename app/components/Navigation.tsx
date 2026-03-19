@@ -3,20 +3,22 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function Navigation() {
-    const lPathname: string = usePathname();
+type NavigationItem = {
+    pHref: string;
+    pLabel: string;
+};
 
-    const lNavItems: Array<{ pHref: string; pLabel: string }> = [
-        { pHref: '/', pLabel: 'CV' },
-        { pHref: '/projects', pLabel: 'Personal projects' },
-        { pHref: '/studies', pLabel: 'Studies' },
-        { pHref: '/interests', pLabel: 'Interests' },
-    ];
+interface NavigationProps {
+    pItems: NavigationItem[];
+}
+
+export default function Navigation({ pItems }: NavigationProps) {
+    const lPathname: string = usePathname();
 
     return (
         <nav className="navigation">
             <ul>
-                {lNavItems.map((lItem: { pHref: string; pLabel: string }) => {
+                {pItems.map((lItem: NavigationItem) => {
                     const lIsActive: boolean = lPathname === lItem.pHref;
                     return (
                         <li key={lItem.pHref}>

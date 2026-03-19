@@ -2,38 +2,48 @@ import ThemeToggle from '../components/ThemeToggle';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import InterestEntry from '../components/InterestEntry';
+import { getContent } from '../data/content';
+import { getRequestLocale } from '../lib/locale';
 
-import { HEADER_DATA, INTERESTS } from '../data/content';
+export default async function Interests() {
+    const lLocale = await getRequestLocale();
+    const lContent = getContent(lLocale);
 
-export default function Interests() {
+    const lNavItems = [
+        { pHref: '/', pLabel: lContent.labels.navigation.cv },
+        { pHref: '/projects', pLabel: lContent.labels.navigation.projects },
+        { pHref: '/studies', pLabel: lContent.labels.navigation.studies },
+        { pHref: '/interests', pLabel: lContent.labels.navigation.interests },
+    ];
+
     return (
         <>
-            <ThemeToggle />
+            <ThemeToggle pTitle={lContent.labels.themeToggle} />
             <div className="main-wrapper">
                 <div className="nav-sidebar">
-                    <Navigation />
+                    <Navigation pItems={lNavItems} />
                 </div>
                 <div className="container">
                     <Header
-                        pName={HEADER_DATA.name}
-                        pProfileImage={HEADER_DATA.profileImage}
-                        pJobTitle={HEADER_DATA.jobTitle}
-                        pEmail={HEADER_DATA.email}
-                        pPhone={HEADER_DATA.phone}
-                        pLocation={HEADER_DATA.location}
-                        pLinkedIn={HEADER_DATA.linkedIn}
-                        pGitHub={HEADER_DATA.gitHub}
+                        pName={lContent.headerData.name}
+                        pProfileImage={lContent.headerData.profileImage}
+                        pJobTitle={lContent.headerData.jobTitle}
+                        pEmail={lContent.headerData.email}
+                        pPhone={lContent.headerData.phone}
+                        pLocation={lContent.headerData.location}
+                        pLinkedIn={lContent.headerData.linkedIn}
+                        pGitHub={lContent.headerData.gitHub}
                     />
 
                     <div className="content">
                         <div className="main">
                             <section>
-                                <h2>Interests</h2>
-                                {INTERESTS.map((interest, index) => (
+                                <h2>{lContent.labels.interests.interests}</h2>
+                                {lContent.interests.map((lInterest, lIndex) => (
                                     <InterestEntry
-                                        key={index}
-                                        pTitle={interest.title}
-                                        pDescription={interest.description}
+                                        key={lIndex}
+                                        pTitle={lInterest.title}
+                                        pDescription={lInterest.description}
                                     />
                                 ))}
                             </section>

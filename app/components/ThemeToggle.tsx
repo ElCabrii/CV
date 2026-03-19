@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from 'react';
 
-export default function ThemeToggle() {
+interface ThemeToggleProps {
+    pTitle: string;
+}
+
+export default function ThemeToggle({ pTitle }: ThemeToggleProps) {
     const [lIsLightTheme, setIsLightTheme] = useState<boolean>(false);
 
     useEffect(() => {
-        // Check for saved theme preference
         const lSavedTheme: string | null = localStorage.getItem('theme');
         if (lSavedTheme === 'light') {
             setIsLightTheme(true);
@@ -32,7 +35,7 @@ export default function ThemeToggle() {
             <button
                 id="theme-toggle"
                 className="btn-control"
-                title="Toggle Theme"
+                title={pTitle}
                 onClick={toggleTheme}
             >
                 <i className={lIsLightTheme ? 'icon-energy' : 'icon-bulb'}></i>
