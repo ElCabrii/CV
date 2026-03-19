@@ -5,6 +5,7 @@ import { getContent } from './data/content';
 import DownloadCvButton from './components/DownloadCvButton';
 import LanguageToggle from './components/LanguageToggle';
 import { getRequestLocale } from './lib/locale';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lOutfit = Outfit({
   subsets: ['latin'],
@@ -39,6 +40,7 @@ export default async function RootLayout({
         <LanguageToggle pLocale={lLocale} pTitle={lContent.labels.languageToggle} />
         <DownloadCvButton pUrl="/cv" pTitle={lContent.labels.downloadCv} />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
