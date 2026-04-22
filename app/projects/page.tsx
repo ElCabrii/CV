@@ -50,10 +50,10 @@ export default async function Projects() {
                             <section>
                                 <h2>{lContent.labels.projects.activeDevelopment}</h2>
                                 <ProjectEntry
-                                    pTitle="MyTuums"
+                                    pTitle="MyMyTuums"
                                     pDescription={lActiveDescription}
                                     pTags={['ViteJS', 'React', 'TypeScript', 'Tailwind CSS', 'Fastify', 'tRPC', 'Drizzle', 'PostgreSQL', 'Redis']}
-                                    pUrl="https://mytuums.fr"
+                                    pUrl="https://myMyTuums.fr"
                                     pUrlText={lContent.labels.projects.visitProject}
                                 />
                             </section>

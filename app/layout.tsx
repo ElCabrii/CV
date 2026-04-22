@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Gabriel de Bure - CV',
   description: 'Student and apprentice Software developer',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.ico',
   },
 };
 
@@ -31,12 +31,6 @@ export default async function RootLayout({
 
   return (
     <html lang={lLocale} suppressHydrationWarning>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
-        />
-      </head>
       <body className={lOutfit.className} suppressHydrationWarning>
         <LanguageToggle pLocale={lLocale} pTitle={lContent.labels.languageToggle} />
         <DownloadCvButton pUrl="/cv" pTitle={lContent.labels.downloadCv} />

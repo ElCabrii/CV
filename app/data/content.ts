@@ -147,7 +147,7 @@ const CONTENT: Record<Locale, LocalizedContent> = {
         ],
         projects: [
             {
-                title: 'Social Media Platform: MyTuums (Ongoing)',
+                title: 'Social Media Platform: MyMyTuums (Ongoing)',
                 description:
                     'Built a social media platform as a single monorepo using ViteJS with React and Tailwind on the frontend, and a Fastify backend with tRPC, Drizzle ORM, PostgreSQL, and Redis.',
             },
@@ -312,7 +312,7 @@ const CONTENT: Record<Locale, LocalizedContent> = {
         ],
         projects: [
             {
-                title: 'Plateforme sociale : MyTuums (En cours)',
+                title: 'Plateforme sociale : MyMyTuums (En cours)',
                 description:
                     "Création d'une plateforme sociale en monorepo avec ViteJS, React et Tailwind pour le frontend, et un backend Fastify avec tRPC, Drizzle ORM, PostgreSQL et Redis.",
             },

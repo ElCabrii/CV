@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { HiOutlineBolt, HiOutlineLightBulb } from 'react-icons/hi2';
 
 interface ThemeToggleProps {
     pTitle: string;
@@ -38,7 +39,11 @@ export default function ThemeToggle({ pTitle }: ThemeToggleProps) {
                 title={pTitle}
                 onClick={toggleTheme}
             >
-                <i className={lIsLightTheme ? 'icon-energy' : 'icon-bulb'}></i>
+                {lIsLightTheme ? (
+                    <HiOutlineBolt className="control-icon" aria-hidden="true" focusable="false" />
+                ) : (
+                    <HiOutlineLightBulb className="control-icon" aria-hidden="true" focusable="false" />
+                )}
             </button>
         </div>
     );

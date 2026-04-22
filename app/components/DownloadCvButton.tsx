@@ -1,3 +1,5 @@
+import { FaRegFilePdf } from 'react-icons/fa6';
+
 interface DownloadCvButtonProps {
     pUrl: string;
     pTitle: string;
@@ -14,7 +16,7 @@ export default function DownloadCvButton({ pUrl, pTitle }: DownloadCvButtonProps
                 title={pTitle}
                 aria-label={pTitle}
             >
-                <i className="icon-cloud-download"></i>
+                <FaRegFilePdf className="control-icon" aria-hidden="true" focusable="false" />
             </a>
         </div>
     );
